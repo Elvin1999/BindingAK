@@ -60,7 +60,7 @@
             <Button Click="Button_Click_1" FontSize="30">Click Me</Button>-->
 
 
-            <!--<ListBox ItemsSource="{Binding Cars}" SelectedItem="{Binding Car}" SelectionChanged="ListBox_SelectionChanged">
+            <ListBox ItemsSource="{Binding Cars}" SelectedItem="{Binding Car}" SelectionChanged="ListBox_SelectionChanged">
                 <ListBox.ItemTemplate>
                     <DataTemplate>
                         <StackPanel Orientation="Horizontal">
@@ -75,7 +75,7 @@
                 </ListBox.ItemTemplate>
             </ListBox>
 
-            <Button Click="Button_Click_2" FontSize="30" >Add</Button>-->
+            <Button Name="mybtn" Click="Button_Click_2" FontSize="30" >Add</Button>
 
 
             <!--<TabControl Margin="10" BorderBrush="Gainsboro">

@@ -39,6 +39,7 @@ namespace WpfApp2
         //    }
         //}
 
+        public EventHandler<EventArgs> MyEvent { get; set; }
 
 
         public Car Car
@@ -56,6 +57,15 @@ namespace WpfApp2
         {
             InitializeComponent();
             this.DataContext = this;
+
+            
+
+        }
+
+        private void TextBox_TextChanged(object sender, TextChangedEventArgs e)
+        {
+            
+            MyEvent.Invoke(sender, e);
         }
     }
 }

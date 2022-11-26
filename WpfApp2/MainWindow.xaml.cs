@@ -129,12 +129,23 @@ namespace WpfApp2
             //});
 
         }
+        public EventHandler<EventArgs> MyEvent { get; set; }
 
         private void ListBox_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
             InfoWindow infoWindow = new InfoWindow();
+            MyEvent += MyEvent_Changed;
+            infoWindow.MyEvent = MyEvent;
             infoWindow.Car=Car;
             infoWindow.Show();
         }
+        //Not Wpf it is Winform rule
+        public void MyEvent_Changed(object sender,EventArgs eventArgs)
+        {
+            var myTxtBox = sender as TextBox;
+            mybtn.Content = myTxtBox.Text;
+        }
+
+
     }
 }

@@ -5,11 +5,11 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:WpfApp2"
         mc:Ignorable="d"
-        Title="InfoWindow" Height="450" Width="800">
+        Title="InfoWindow" Height="450" Width="800" WindowStartupLocation="CenterScreen">
     <Grid>
         <StackPanel>
             <TextBlock FontSize="25">Model</TextBlock>
-            <TextBox Text="{Binding Car.Model,Mode=TwoWay,UpdateSourceTrigger=PropertyChanged}" FontSize="25"></TextBox>
+            <TextBox TextChanged="TextBox_TextChanged" Text="{Binding Car.Model,Mode=TwoWay,UpdateSourceTrigger=PropertyChanged}" FontSize="25"></TextBox>
             <TextBlock FontSize="25">Vendor</TextBlock>
             <TextBox Text="{Binding Car.Vendor,Mode=TwoWay,UpdateSourceTrigger=PropertyChanged}" FontSize="25"></TextBox>
             <TextBlock FontSize="25">Engine</TextBlock>
